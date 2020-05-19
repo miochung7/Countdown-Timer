@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container row">
+        <div class="timer">
+            <div class="controls-container row ">
+                <input id="duration" class="timer-input" type="text" placeholder="How many seconds?"></input>
+                <div class="controls">
+                    <input id="pause" class="timer-button" type="button" value="Pause"></input>
+                    <input id="start" class="timer-button timer-start" type="button" value="Start Timer"></input>
+                    <input id="reset" class="timer-button" type="reset" value="Reset"></input>
+                </div>
+
+            </div>
+            <svg class="dial">
+                <defs>
+                    <linearGradient id="linear" x1="0%" y1="100%" x2="100%" y2="0%">
+                        <stop offset="0%" style="stop-color:rgb(255,255,255);stop-opacity:1" />
+                        <stop offset="99%" style="stop-color:rgb(145,231,255);stop-opacity:1" />
+                        <stop offset="100%" style="stop-color:rgb(145,231,255);stop-opacity:1" />
+                    </linearGradient>
+                </defs>
+                <circle r="190" cx="200" cy="200" fill="transparent" stroke="url(#linear)" stroke-width="10"
+                    transform="rotate(-90 200 200)" />
+
+            </svg>
+            <audio id="audio">
+                <source src="http://www.lumerink.com/docs/Matlab/Communications%20Examples/gong.wav" type="audio/wav">
+                </source>
+            </audio>
+        </div>
+
+
+        <svg height="512" viewBox="0 0 512 512" width="512" xmlns="http://www.w3.org/2000/svg">
+            <g id="Flat">
+                <path d="m24 264h464v32h-464z" fill="#ffb531" />
+                <rect fill="#348fd9" height="184" rx="16" width="256" x="128" y="24" />
+                <path d="m384 40v152a16 16 0 0 1 -16 16h-212.95l187.12-184h25.83a16 16 0 0 1 16 16z" fill="#3086cd" />
+                <path d="m296 264h-80l11.43-40 4.57-16h48l4.57 16z" fill="#e0e0de" />
+                <path d="m152 48h16v16h-16z" fill="#62a9e6" />
+                <path d="m152 80h16v72h-16z" fill="#62a9e6" />
+                <path d="m128 192a16 16 0 0 0 16 16h224a16 16 0 0 0 16-16v-16h-256z" fill="#e0e0de" />
+                <path d="m284.57 224h-57.14l4.57-16h48z" fill="#cfcfcd" />
+                <g fill="#ffa912">
+                    <path d="m48 424h80v32h-80z" />
+                    <path d="m56 488h-32l32-192h32z" />
+                    <path d="m120 488h32l-32-192h-32z" />
+                    <path d="m344 296h144v48h-144z" />
+                    <path d="m344 392h144v48h-144z" />
+                    <path d="m344 344h144v48h-144z" />
+                    <path d="m344 440h144v48h-144z" />
+                </g>
+                <path d="m392 296 8 16h32l8-16z" fill="#ed8c0c" />
+                <path d="m432 360 8-16h-48l8 16z" fill="#ed8c0c" />
+                <path d="m400 408h32l8-16h-48z" fill="#ed8c0c" />
+                <path d="m400 456h32l8-16h-48z" fill="#ed8c0c" />
+                <path d="m439.655 157h61.19v16h-61.19z" fill="#4db7e5"
+                    transform="matrix(.319 -.948 .948 .319 164.001 558.156)" />
+                <path d="m418 134.351h15.999v62.298h-15.999z" fill="#348fd9"
+                    transform="matrix(.947 -.321 .321 .947 -30.582 145.523)" />
+                <path d="m440 128h16v64h-16z" fill="#60d1e0" />
+                <path d="m416 184h64v80h-64z" fill="#f35244" />
+                <path d="m456 184h24v80h-24z" fill="#e84d40" />
+                <path d="m96 208-8 56h-48l-8-56z" fill="#f98500" />
+                <path d="m96 208-8 56h-23.44l7.81-56z" fill="#f77c00" />
+                <path d="m64 160a16 16 0 0 1 16 16v32a0 0 0 0 1 0 0h-32a0 0 0 0 1 0 0v-32a16 16 0 0 1 16-16z"
+                    fill="#7eb457" />
+                <path d="m344 328h144v16h-144z" fill="#fa9f0c" />
+                <path d="m344 376h144v16h-144z" fill="#fa9f0c" />
+                <path d="m344 424h144v16h-144z" fill="#fa9f0c" />
+            </g>
+        </svg>
+    </div>
+    <!-- stroke-dasharray="565"
+        stroke-dashoffset="0" -->
+
+
+    <script src="timer.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>

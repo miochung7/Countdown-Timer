@@ -1,0 +1,95 @@
+* {
+    font: inherit;
+}
+
+body {
+    background: rgb(94, 153, 212);
+    font-family: Futura, 'Trebuchet MS', Arial, sans-serif;
+    color: white;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.row {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.dial {
+    height: 400px;
+    width: 400px;
+}
+
+.timer {
+    position: relative;
+    display: inline-block;
+}
+
+
+.controls-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+}
+
+
+#start:hover,
+#pause:hover,
+#reset:hover {
+    opacity: 0.4;
+}
+
+#duration {
+    width: 40%;
+    background: rgba(255, 255, 255, 0.505);
+    border: none;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    font-size: 17px;
+    padding: 1rem 5rem;
+    border-radius: 5px;
+    color: #fff;
+    text-align: center;
+}
+
+#duration:focus {
+    outline: 0;
+}
+
+#duration::placeholder {
+    color: #fff;
+}
+
+#start:focus,
+#pause:focus,
+#reset:focus {
+    outline: 0;
+}
+
+
+.timer-button {
+    width: 30%;
+    background: rgba(255, 255, 255, 0.245);
+    margin: 1rem;
+    padding: 0.5rem 1rem;
+    color: #fff;
+    border: none;
+    font-size: 15px;
+}
+
+#start {
+    background: rgba(11, 92, 224, 0.745);
+}
